@@ -1,16 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import DarkModeToggle from "@components/DarkModeToggle";
 import HomePage from "@components/HomePage";
-
-import styles from "@styles/pages/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Next.js Site Template</title>
-        <meta name="description" content="Prepared boilerplate for Next.js" />
+        <title>osu! Mappack Downloader</title>
+        <meta name="description" content="Generate zip files from mapset ids." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomePage />

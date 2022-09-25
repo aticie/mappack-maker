@@ -7,9 +7,7 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-    prependData: `
-    @import "src/styles/extendables/index.scss";
-    @import "src/styles/variables/index.scss";`,
+    prependData: `@import "src/styles/variables/index.scss";`,
   },
   reactStrictMode: true,
 }
