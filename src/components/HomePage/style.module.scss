@@ -1,0 +1,23 @@
+.home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+  width: 100%;
+
+  >textarea{
+    max-height: 30rem;
+    height: 10rem;
+    min-height: 5rem;
+    max-width: 40rem;
+    width: 20rem;
+    min-width: 10rem;
+
+    background-color: var(--backgroundTextbox);
+  }
+
+  .submit{
+    border-radius: 100vmax;
+  }
+}

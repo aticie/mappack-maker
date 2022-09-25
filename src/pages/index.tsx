@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import DarkModeToggle from "@components/DarkModeToggle";
+import HomePage from "@components/HomePage";
+
 import styles from "@styles/pages/Home.module.css";
 
 const Home: NextPage = () => {
@@ -11,7 +13,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Prepared boilerplate for Next.js" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <DarkModeToggle />
+      <HomePage />
     </div>
   );
 };

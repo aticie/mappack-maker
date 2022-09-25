@@ -1,10 +1,33 @@
 @import "./variables/index.scss"; //All variables
 
+html[data-theme="dark"] {
+  --backgroundColor: hsl(0, 0%, 10%);
+  --backgroundTextbox: hsl(0, 0%, 15%);
+  --primaryColor: hsl(205, 50%, 25%);
+  --secondaryColor: hsl(294, 50%, 25%);
+  --primaryColorBg: hsl(205, 50%, 25%);
+  --secondaryColorBg: hsl(294, 50%, 25%);
+  --primaryColorText: var(--textColor);
+  --secondaryColorText: var(--textColor);
+  --textColor: hsl(0, 0%, 90%);
+}
+html[data-theme="light"] {
+  --backgroundColor: hsl(0, 0%, 90%);
+  --backgroundTextbox: hsl(0, 0%, 85%);
+  --primaryColor: hsl(205, 100%, 50%);
+  --secondaryColor: hsl(294, 100%, 50%);
+  --primaryColorBg: hsla(205, 100%, 50%, 15%);
+  --secondaryColorBg: hsl(294, 100%, 50%, 15%);
+  --primaryColorText: var(--primaryColor);
+  --secondaryColorText: var(--secondaryColor);
+  --textColor: hsl(0, 0%, 10%);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   background-color: $color-background;
@@ -22,8 +45,22 @@ a {
 }
 
 button {
-  color: $color-text;
-  background-color: $color-primary;
+  padding: 0.5rem 2rem;
+
+  color: $color-primary-text;
+  background-color: $color-primary-bg;
+
+  border: none;
+  outline: 2px solid $color-primary;
+
+  font-weight: 700;
+  font-size: 1.25rem;
 
   cursor: pointer;
+
+  &:hover{
+    color: $color-text;
+    outline-color: $color-text;
+    background-color: $color-primary;
+  }
 }
